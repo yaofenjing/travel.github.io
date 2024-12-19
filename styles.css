@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Roboto", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #FFCDF8;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color:#554938;
+}
+
+#header{
+    display: flex;
+    position:fixed;
+    z-index: 100;
+    height: 3.75rem;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color: #FBAFBA;
+}
+
+.brand h1{
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+#header .naviga{
+    display: flex;
+    padding-left: 48rem;
+    padding-top: .875rem;
+}
+
+.naviga li{
+    border-radius: 10%;
+    margin: auto 2rem;
+    font-weight: bold;
+}
+
+
+
+.major-image {
+    display: flex;
+    background-image: url('pexels-dreamypixel-547115.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.major-title h1 {
+    color: white;
+    font-size: 4rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 0; 
+    text-align: center; 
+    opacity: 80%;
+}
+
+#story-section{
+    display:flex;
+    padding: 1rem 10rem;
+    border-bottom: 0.1rem solid gray;
+}
+
+.story-image{
+    width: 30rem;
+    height: auto;
+    padding-top: 0.5rem;
+}
+
+.story{
+    font-family: "Roboto", serif;
+    width: 40rem;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    padding-left: 2rem;
+    padding-top: 5rem;
+    font-weight: 100;
+}
+
+
+#travel-section {
+    background-color: #F07A68;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 0.1rem solid gray;
+  }
+  
+  .travel-item {
+    position: relative;
+    padding: 1rem;
+    width: 25rem;
+    height: auto;
+  }
+  
+  .travel-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* 默认隐藏 */
+    transition: opacity 0.5s ease;
+  }
+  
+  /* 鼠标悬停效果 */
+  .travel-item:hover .travel-overlay {
+    opacity: 1;
+  }
+
+#personal-section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 0.1rem solid gray;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+}
+
+.personal1,
+.personal2,
+.personal3{
+    position: relative;
+    width: 23rem;
+}
+
+.personal1 img,
+.personal2 img,
+.personal3 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#personal-section h3{
+    text-align: center;
+    position: absolute; /* 绝对定位 */
+    bottom: 0; /* 位于图片底部 */
+    left: 0; /* 水平靠左 */
+    width: 100%; /* 宽度与图片一致 */
+    margin: 0; /* 移除外边距 */
+    padding: 0.5rem 0; /* 内边距 */
+    text-align: center; /* 居中对齐 */
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    color: white; /* 字体颜色 */
+    font-size: 1.5rem; /* 字体大小 */
+}
+
+.personal-description{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.personal-description h1{
+    font-size: 3rem;
+}
+
+
+#footer{
+    background-color:#FBAFBA ;
+    display:flex;
+    justify-content: space-between;
+    border-top: 0.1rem solid gray;
+}
+
+.pravicy{
+    margin-top: 20rem;
+}
+
+
+.contact h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact{
+    text-align: center;
+    margin-top: 4rem;
+    margin-left: 5rem;
+}
+
+.contact h3{
+    color:#F05A18;
+}
+
+.direction{
+    margin-top: 3rem;
+    margin-right: 4rem;
+}
+
+
+@media only screen and (max-width: 768px){
+    #header .navigation{
+        display: none;
+    }
+
+    #story-section .story-image{
+        display: none;
+    }
+
+    .story{
+        font-family: "Roboto", serif;
+        width: 20rem;
+        line-height: 1.5;
+        font-size: 1rem;
+        font-weight: 100;
+        padding: 1rem 1rem;
+        text-align: justify;
+    }
+
+    #story-section{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0 0;
+    }
+
+    #personal-section{
+        display:none;
+    }
+
+    #footer .pravicy{
+        display:none;
+    }
+
+    #footer .contact h1{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #footer{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .direction{
+        margin: 0 auto;
+    }
+
+    .contact{
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width:992px){
+    .brand h1{
+        padding-left: 2rem;
+    }
+    
+    #header .naviga{
+        padding-left: 12rem;
+    }
+    
+    .naviga li{
+        margin: auto 1rem;
+    }
+
+    #story-section{
+        display:flex;
+        padding:0 0;
+        border-bottom: 0.1rem solid gray;
+    }
+    
+    .story-image{
+        width: 40rem;
+        height: auto;
+        padding:1rem 1rem;
+        margin-top: 1.2rem;
+    }
+    
+    .story{
+        font-family: "Roboto", serif;
+        width: 50rem;
+        line-height: 1.5;
+        font-size: 1.3rem;
+        padding:1rem 1rem;
+        font-weight: 100;
+    }
+
+    #personal-section{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 0.1rem solid gray;
+    }
+    
+    .image-container{
+        display: flex;
+        justify-content: center;
+        gap:1rem;
+    }
+    
+    .personal1,
+    .personal2,
+    .personal3{
+        width: 15rem;
+    }
+    
+    .personal-description h1{
+        font-size: 2rem;
+    }
+
+    #footer .pravicy{
+        display:none;
+    }
+
+    #footer .contact h1{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .brand h1{
+        padding-left: 2rem;
+    }
+    
+    #header .naviga{
+        padding-left: 45rem;
+    }
+    
+    .naviga li{
+        margin: auto 2rem;
+    }
+}
